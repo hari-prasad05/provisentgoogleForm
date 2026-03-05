@@ -16,7 +16,7 @@ const Footer = () => {
                     <div className="flex gap-4">
                         {[
                             { icon: Facebook, link: "https://www.facebook.com/profile.php?viewas=100000686899395&id=61588543630941" },
-                            { icon: Linkedin, link: "https://www.linkedin.com/feed/?trk=sem-ga_campid.14650114788_asid.151761418507_crid.657403558733_kw.linkedin%20jobs_d.c_tid.kwd-1528692947_n.g_mt.e_geo.9182246" },
+                            { icon: Linkedin, link: "https://www.linkedin.com/in/provisent-edutech-private-limited-542b203b4/" },
                             { icon: Instagram, link: "https://www.instagram.com/provisent_edutech/" },
                             { icon: Twitter, link: "https://x.com/provisent" }
                         ].map((social, i) => (
