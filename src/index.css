@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
+
+@theme {
+  --color-primary: #E6A520;
+  --color-primary-light: #FFD77A;
+  --color-primary-dark: #7A4A00;
+  --color-bg-soft: #FFF8E7;
+
+  --font-poppins: "Poppins", "sans-serif";
+  --font-inter: "Inter", "sans-serif";
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-wave: wave 10s linear infinite;
+
+  --shadow-premium: 0 10px 30px rgba(230, 165, 32, 0.4);
+  --shadow-premium-hover: 0 20px 50px rgba(230, 165, 32, 0.5);
+  --shadow-subtle: 0 30px 100px rgba(0, 0, 0, 0.05);
+  --shadow-glow: 0 0 10px rgba(230, 165, 32, 0.5);
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes wave {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
+
+@layer base {
+  body {
+    @apply font-inter text-gray-900 bg-white scroll-smooth antialiased overflow-x-hidden;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-xl border border-white/20 shadow-xl;
+  }
+
+  .btn-premium {
+    @apply px-10 py-4 bg-primary text-white rounded-2xl font-black text-xl shadow-premium hover:scale-105 active:scale-95 transition-all duration-300;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
